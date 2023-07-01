@@ -19,12 +19,11 @@ body{
     line-height: 1.3;
     margin: 0;
     width: auto;
-    height: 8000px;
-
 }   
 a{
     color: inherit;
     text-decoration: none;
+    transition: all .4s;
 }
 .topbar-container{
     position: fixed;
@@ -42,7 +41,7 @@ nav{
     padding: 0 15%;
     height: 75px;
     line-height: 75px;
-    background: #dcdcdb;
+    background: #ffeee6;
 
 }
 .nav-brand{
@@ -94,6 +93,117 @@ nav .nav-list .nav-item:hover{
     font-size: 4em;
 }
 
+.big-container{
+    background: #030101;
+    padding: 30px;
+
+}
+.big-container h2{
+    color: #e36224;
+    padding-bottom: 30px;
+    position: relative;
+}
+.big-container h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 2px;
+    background-color: #e36224;
+    transition: width .5s;
+}
+.big-container:hover h2::after{
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: all 1s;
+}
+
+.tabs li a{
+    display: inline-block;
+    width: 300px;
+    height: 3em;
+    text-align: justify;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all .4s;
+
+}
+.tabs li a:hover{
+    color: #e36224;
+
+}
+.tabs li.active a:hover{
+    color: white;
+}
+
+.tab-content{
+    text-align: justify;
+}
+
+.service-img {
+    max-width: 450px;
+    min-width: 50%;
+    height: auto;
+    margin: 0 20px;
+    border-radius: 50%;
+}
+.service-img img{
+    max-width: 100%;
+    min-width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.tab-content{
+    display: none;
+    transition: opacity 1s;
+    opacity: 0;
+}
+.tab-content.active{
+    display: flex;
+    opacity: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+.fade{
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.fade.in{
+    opacity: 1;
+}
+.tabs .active a{
+    background: #e36224;
+    color: white;
+}
+.service-img{
+    flex-grow: 1;
+}
+.tab-content .body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+.body p a{
+    display: inline-block;
+    background: #e36224;
+    padding: 1em;
+    margin-top: 2em;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
 @media (max-width: 884px) {
     
     nav .nav-list{
@@ -135,6 +245,17 @@ nav .nav-list .nav-item:hover{
         color: #e36224;
         font-weight: 700;
         font-size: 2em;
+    }
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tab-content.active{
+        display: flex;
+        opacity: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
