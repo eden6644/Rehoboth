@@ -19,11 +19,16 @@ body{
     line-height: 1.3;
     margin: 0;
     width: auto;
+    color: #6f6f6f;
 }   
 a{
     color: inherit;
     text-decoration: none;
     transition: all .4s;
+}
+img{
+    max-width: 100%;
+    height: auto;
 }
 .topbar-container{
     position: fixed;
@@ -33,8 +38,11 @@ a{
     opacity: .8;
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
 }
-
+p{
+    text-align: justify;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -92,7 +100,57 @@ nav .nav-list .nav-item:hover{
     font-weight: 700;
     font-size: 4em;
 }
+.container-small{
+    margin: 0 50px;
+}
 
+.title{
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+}
+.block-body{
+    order: 1;
+    padding-left: 30px;
+}
+.block-body .title{
+    margin: 15px;
+}
+.block-left{
+    display: flex;
+    justify-content: space-around;
+}
+.block-img{
+    max-width: 450px;
+    min-width: 50%;
+    height: auto;
+    position: relative;
+    margin-left: 30px;
+}
+.block-img::before{
+    content: '';
+    position: absolute;
+    display: block;
+    border: solid 1px #e36224;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.block-img img{
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    min-width: 50%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+}
 .big-container{
     background: #030101;
     padding: 30px;
@@ -207,6 +265,47 @@ nav .nav-list .nav-item:hover{
 }
 .body p a:hover{
     transform: scale(1.2);
+}
+@media (max-width: 840px) {
+    .container-small{
+        margin: 0;
+    }
+    .block-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .block-img{
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0;
+    }
+    .block-img::before{
+        content: '';
+        position: absolute;
+        display: block;
+        border: solid 1px #e36224;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .block-img img{
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        min-width: 50%;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    
+    }
+    .block-body{
+        order: -1;
+        padding: 20px;
+    }
 }
 @media (max-width: 884px) {
     
