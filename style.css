@@ -202,7 +202,11 @@ nav .nav-list .nav-item:hover{
     margin-top: 2em;
     color: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
+    border-radius: 2px;
+    transition: transform .4s;
+}
+.body p a:hover{
+    transform: scale(1.2);
 }
 @media (max-width: 884px) {
     
