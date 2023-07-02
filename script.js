@@ -19,8 +19,18 @@ let afficherOnglet = function(a){
 
 //partie ajouté:
 document.addEventListener('DOMContentLoaded', function(){
-    let tabs = document.querySelectorAll('.tabs a')  
-    
+    let tabs = document.querySelectorAll('.tabs a') 
+  /*  
+    submitBtn.addEventListener('click', function(e){
+        let form = document.getElementById('form')
+        if(!form.checkValidity()){
+            e.preventDefault
+        }
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+    })
+*/
     for(let i =0; i<tabs.length; i++){
        tabs[i].addEventListener('click', function(e){
             e.preventDefault(); //empeche le comportement par defaut u lien
@@ -28,42 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
        }) 
     }
 })
-// fin partie ajouté
+//popup
+let popup = document.getElementById('popup')
 
-/*ancienne partie
 
-let tabs = document.querySelectorAll('.tabs a')
-for(let i = 0; i<tabs.length; i++){
-    tabs[i].addEventListener('click', function(e){
-        afficherOnglet(this)                
-                //retire la classe acive sur lecontenu actif
-        
-        //code à concerver
-        //divTabContainer.querySelector('.tab-content.active').classList.remove('active');
-        
-        //ajoute la classe active sur le contenu
-        
-        //code à concerver
-        //divTabContainer.querySelector(this.getAttribute('href')).classList.add('active');
-        
-        /*
-        console.log("active ", activeTab);
-        activeTab.classList.add('fade')
-        activeTab.classList.remove('in')
-
-        activeTab.addEventListener('transitionend', function(){
-            this.classList.remove('fade')
-            this.classList.remove('active')
-            aAfficher.classList.add('active')
-            aAfficher.classList.add('fade')
-            aAfficher.classList.add('in')
-        })
-        
-        //ajout de la classe fade sur l'element actif
-        //  à la fin de l'animation, 
-            // on retire la classe fade et actif
-            //on ajoute la classe active et fade à l'element à afficher
-            //on ajoute la classe in
-    })
-}
-*/

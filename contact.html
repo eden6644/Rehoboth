@@ -17,7 +17,7 @@
             <div class="topbar">
                 <input type="checkbox" id="toggle">
                 <nav>
-                    <a href="#" class="nav-brand">
+                    <a href="index.html" class="nav-brand">
                         Rehoboth
                     </a>
                     <label for="toggle" class="navbar-toggler">
@@ -45,15 +45,20 @@
         <div class="contact-section">
             <h2 class="title">Contact Us</h2>
             <div class="border"></div>
-            <form class="contact-form" action="index.html" method="post">
-              <input type="text" class="contact-form-text" placeholder="Your name">
+            <form class="contact-form" action="#" method="GET" id="form">
+              <input type="text" class="contact-form-text" placeholder="Your name" required>
               <input type="email" class="contact-form-text" placeholder="Your email">
-              <input type="text" class="contact-form-text" placeholder="Your phone">
-              <textarea class="contact-form-text" placeholder="Your message"></textarea>
-              <input type="submit" class="contact-form-btn" value="Send">
+              <input type="text" class="contact-form-text" placeholder="Your phone"required>
+              <textarea class="contact-form-text" placeholder="Your message" required></textarea>
+              <input type="submit" class="contact-form-btn" value="Send" onclick="openPopup()" id="submit-btn">
             </form>
           </div>
-    
+          <div class="popup" id="popup">
+            <img src="img/checkicon.png" alt="">
+            <h2>Thank you, your message was sended!</h2>
+            <button type="button" onclick="closePopup()">Ok</button>
+          </div>
+        </div>
         <div class="adresses">
             <div class="emailtelogo">
                 <a href="#" class="nav-brand">
@@ -72,5 +77,33 @@
         </p>
     </section>
     <script src="script.js"></script>
+    <script>
+        function openPopup(e){
+            e.preventDefault();
+            let form = document.getElementById('form')
+
+            if(form.checkValidity()){
+                let popup = document.querySelector('.popup');
+                popup.classList.add('open-popup');
+                //ajout du parametre url
+                let url = 'contact.html?showPopup=true';
+                window.location.href = url;
+            }
+        }
+        document.getElementById('form').addEventListener('submit', openPopup);
+        
+        window.addEventListener('DOMContentLoaded', function(){
+            let urlParams = new URLSearchParams(window.location.search);
+            let showPopup = urlParams.get('showPopup')
+
+            if(showPopup === 'true'){
+                let popup = document.querySelector('.popup');
+                popup.classList.add('open-popup');
+            }
+        })
+        function closePopup(){
+            popup.classList.remove('open-popup');
+        }
+    </script>
 </body>
 </html>
