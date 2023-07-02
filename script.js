@@ -17,6 +17,20 @@ let afficherOnglet = function(a){
 
 }
 
+//partie ajouté:
+document.addEventListener('DOMContentLoaded', function(){
+    let tabs = document.querySelectorAll('.tabs a')  
+    
+    for(let i =0; i<tabs.length; i++){
+       tabs[i].addEventListener('click', function(e){
+            e.preventDefault(); //empeche le comportement par defaut u lien
+            afficherOnglet(this)
+       }) 
+    }
+})
+// fin partie ajouté
+
+/*ancienne partie
 
 let tabs = document.querySelectorAll('.tabs a')
 for(let i = 0; i<tabs.length; i++){
@@ -44,7 +58,7 @@ for(let i = 0; i<tabs.length; i++){
             aAfficher.classList.add('fade')
             aAfficher.classList.add('in')
         })
-        */
+        
         //ajout de la classe fade sur l'element actif
         //  à la fin de l'animation, 
             // on retire la classe fade et actif
@@ -52,3 +66,4 @@ for(let i = 0; i<tabs.length; i++){
             //on ajoute la classe in
     })
 }
+*/
