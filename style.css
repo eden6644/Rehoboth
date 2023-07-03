@@ -78,8 +78,16 @@ nav .nav-list .nav-item:hover{
     background: #e36224;
     color: white;
 }
+nav .nav-list .nav-item.btn:hover{
+    background: none;
+    transform: scale(1.1);
+}
 .nav-link{
     font-weight: 700;
+}
+nav .nav-list .nav-item.btn .nav-btn{
+    border: solid 1px #e36224;
+    background-color: #6f6f6f;
 }
 
 .baseline-container{
@@ -523,18 +531,19 @@ nav .nav-list .nav-item:hover{
     nav .nav-list{
         display: grid;
         position: absolute;
-        background: #e36224;
+        background: #ffeee6;
         width: 100%;
         top: 75px;
         left: 0;
-        opacity: .9;
+        opacity: 1;
         transform: translateY(-100%);
         z-index: -1;
         transition: .6s;
+        
     }
     nav .nav-list .nav-item{
         padding-left: 35px;
-        color: white;
+        color: #6f6f6f;
     }
     nav .nav-list .nav-item:focus{
         background: white;
@@ -543,6 +552,7 @@ nav .nav-list .nav-item:hover{
         background: #dcdcdb;
         color: #e36224;
     }
+    
     nav .navbar-toggler{
         display: grid !important;
     }
