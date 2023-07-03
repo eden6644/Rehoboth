@@ -98,15 +98,59 @@ nav .nav-list .nav-item:hover{
     align-items: center;
     justify-content: space-around;
 }
-.baseline-container .carrousel .activity-span{
-    color: white;
-    font-weight: 700;
-    font-size: 4em;
+.wrapper{
+    background: #e36224;
+    opacity: .7;
+    backdrop-filter: blur(5px);
+    height: 110px;
+    width: 60%;
+    padding: 2em 30px; 
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
-.baseline-container .carrousel .activity-strong{
-    color: #e36224;
+.wrapper p{
+    color: white;
+    font-size: 40px;
     font-weight: 700;
-    font-size: 4em;
+}
+.words{
+    overflow: hidden;
+}
+.words span{
+    display: block;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+
+    animation: spinword 20s infinite;
+}
+@keyframes spinword{
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
 }
 .container-small{
     margin: 10px 50px;
@@ -345,6 +389,34 @@ nav .nav-list .nav-item:hover{
 
 
 @media (max-width: 840px) {
+    .wrapper{
+        background: #e36224;
+        opacity: .7;
+        backdrop-filter: blur(5px);
+        height: 80px;
+        width: 80%;
+        padding: 2em 30px; 
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    .wrapper p{
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .words{
+        overflow: hidden;
+    }
+    .words span{
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+    
+        animation: spinword 20s infinite;
+    }
     .container-small{
         margin: 0;
     }
@@ -476,17 +548,6 @@ nav .nav-list .nav-item:hover{
     }
     .baseline-container{
         height: 45vh;
-    }
-
-    .baseline-container .carrousel .activity-span{
-        color: white;
-        font-weight: 700;
-        font-size: 2em;
-    }
-    .baseline-container .carrousel .activity-strong{
-        color: #e36224;
-        font-weight: 700;
-        font-size: 2em;
     }
     .container{
         flex-direction: column;
