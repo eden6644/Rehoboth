@@ -13,6 +13,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 body{
     background: #f0f2f2;
     font-family: Roboto, serif;
@@ -47,6 +48,10 @@ video{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     z-index: 100;
 }
+.rehobothlogo{
+    max-width: 250px;
+}
+
 p{
     text-align: justify;
 }
@@ -61,8 +66,9 @@ nav{
 }
 .nav-brand{
     color: #e36224;
+    font-family: 'League Spartan', sans-serif;
     font-size: 28px;
-    font-weight: 500px;
+    font-weight: 900;
 }
 nav .nav-list{
     display: flex;
@@ -132,7 +138,7 @@ nav .nav-list .nav-item.btn .nav-btn{
     font-size: 40px;
     font-weight: 700;
 
-    animation: spinword 20s infinite;
+    animation: spinword 15s infinite;
 }
 @keyframes spinword{
     10%{
@@ -470,6 +476,11 @@ nav .nav-list .nav-item.btn .nav-btn{
         flex-direction: column;
         align-items: center;
         padding: 0;
+    }
+    .about{
+        text-align: justify;
+        width: 100vw;
+        padding: 50px;
     }
     .adresses{
         flex-direction: column;
