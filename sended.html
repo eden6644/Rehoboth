@@ -48,21 +48,9 @@
         <div class="contact-section">
             <h2 class="title">Contact Us</h2>
             <div class="border"></div>
-
-            <form class="contact-form" action="https://formsubmit.co/edenraiven@gmail.com" method="POST" id="form">
-              <input type="text" class="contact-form-text" placeholder="Your name" name="name" required>
-              <input type="email" class="contact-form-text" placeholder="Email Adress" name="email" required>
-              <input type="text" class="contact-form-text" placeholder="Your phone" name="phone" required>
-              <textarea class="contact-form-text" placeholder="Your message" name="message" required></textarea>
-
-              <input type="hidden" name="_subject" value="New Email for Rehoboth S.A.R.L">
-              <input type="hidden" name="_next" value="sended.html">
-
-              <input type="submit" class="contact-form-btn" value="Send" id="submit-btn">
-            </form>
-
+            
           </div>
-          <div class="popup" id="popup">
+          <div class="popup open-popup" id="popup">
             <img src="img/checkicon.png" alt="">
             <h2>Thank you, your message was sended! we will reply very soon</h2>
             <button type="button" onclick="closePopup()">Ok</button>
@@ -98,7 +86,7 @@
                 let url = 'contact.html?showPopup=true';
                 window.location.href = url;
             }
-        }/*
+        }
         document.getElementById('form').addEventListener('submit', openPopup);
         
         window.addEventListener('DOMContentLoaded', function(){
@@ -109,9 +97,10 @@
                 let popup = document.querySelector('.popup');
                 popup.classList.add('open-popup');
             }
-        })*/
+        })
         function closePopup(){
             popup.classList.remove('open-popup');
+            window.location.href = 'index.html';
         }
     </script>
 </body>
