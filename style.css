@@ -140,6 +140,20 @@ nav .nav-list .nav-item.btn .nav-btn{
 
     animation: spinword 15s infinite;
 }
+
+.block-special{
+    width: 95%;
+    height: auto;
+    margin: auto;
+}
+.block-image{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.image img{
+    width: 100%;
+}
 @keyframes spinword{
     10%{
         transform: translateY(-112%);
@@ -191,6 +205,15 @@ nav .nav-list .nav-item.btn .nav-btn{
     display: flex;
     justify-content: space-around;
 }
+.block-center.block{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.block-center.block .block-img{
+    max-width: fit-content;
+}
 .block-img{
     max-width: 450px;
     min-width: 50%;
@@ -205,6 +228,17 @@ nav .nav-list .nav-item.btn .nav-btn{
     border: solid 1px #e36224;
     top: -30px;
     left: -30px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.block-center.block .block-img::before{
+    content: '';
+    position: absolute;
+    display: block;
+    border: solid 1px #e36224;
+    top: -5px;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -363,12 +397,12 @@ nav .nav-list .nav-item.btn .nav-btn{
     padding-left: 10px;
     padding-right: 50px;
 }
-.block-right .block-body .block-img::before{
+.block-right .block-img::before{
     content: '';
     position: absolute;
     display: block;
     top: -30px;
-    left: -30px;
+    left: 30px;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -456,6 +490,17 @@ nav .nav-list .nav-item.btn .nav-btn{
         height: 100%;
         z-index: 0;
     }
+    .block-right .block-img::before{
+        content: '';
+        position: absolute;
+        display: block;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    
     .block-img img{
         position: relative;
         z-index: 1;
