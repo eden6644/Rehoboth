@@ -42,3 +42,11 @@ document.addEventListener('DOMContentLoaded', function(){
 let popup = document.getElementById('popup')
 
 
+function blockAccess(event){
+    if(event.keyCode == 123 || (event.ctrlKey && event.shiftKey && event.keyCode == 73)){
+        event.preventDefault();
+    }
+}
+
+document.addEventListener('keydown', blockAccess);
+document.addEventListener('contextmenu', event => event.preventDefault());
