@@ -517,7 +517,7 @@ nav .nav-list .nav-item.btn .nav-btn{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
+    text-align: left;
 }
 .body p a{
     display: inline-block;
