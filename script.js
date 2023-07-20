@@ -1,3 +1,15 @@
+//Scroll bar
+    window.addEventListener('scroll', function(){
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.body.clientHeight;
+        const scrolled = window.scrollY;
+        const progress = (scrolled / (fullHeight - windowHeight)) * 100;
+
+        const progressIndicator = document.getElementById('scroll-indicator').querySelector('.progress')
+        progressIndicator.style.width = progress + '%';
+    })
+//fin scroll bar
+
 let afficherOnglet = function(a){
     let li = a.parentNode
     let div = document.querySelector('.tab-container');
@@ -41,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function(){
 //popup
 let popup = document.getElementById('popup')
 
-
+/*script block inspection:
 function blockAccess(event){
     if(event.keyCode == 123 || (event.ctrlKey && event.shiftKey && event.keyCode == 73)){
         event.preventDefault();
@@ -50,3 +62,4 @@ function blockAccess(event){
 
 document.addEventListener('keydown', blockAccess);
 document.addEventListener('contextmenu', event => event.preventDefault());
+*/
