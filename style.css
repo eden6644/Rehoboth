@@ -171,7 +171,7 @@ nav .nav-list .nav-item.btn .nav-btn{
 .progress{
     height: 100%;
     background-color: #e36224;
-    width: 0;
+    width: 15px;
     transition: width .4s;
 }
 .baseline-container{
@@ -760,7 +760,10 @@ nav .nav-list .nav-item.btn .nav-btn{
         -webkit-box-ordinal-group: 0;
             -ms-flex-order: -1;
                 order: -1;
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 20px;
     }
     .block-right{
         display: -webkit-box;
