@@ -4,7 +4,6 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-
 *, *::before, *::after{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -54,6 +53,42 @@ video{
     border: #e36224 1px solid;
     z-index: 5;
 }
+/* loader*/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e36224;
+    transition: opacity 0.5s, visibility .5s;
+    z-index: 1000000;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 15px solid #dddddd;
+    border-top-color: #e36224;
+    border-radius: 50%;
+    animation: loading 1.5s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn)
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+/*fin loader*/
 .topbar-container{
     position: fixed;
     top: 0;

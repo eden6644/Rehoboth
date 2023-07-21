@@ -10,6 +10,16 @@
     })
 //fin scroll bar
 
+//removing loader
+window.addEventListener("load", () =>{
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+
+    loader.addEventListener("transitionend", () =>{
+        document.body.removeChild("loader");
+    })
+})
+
 let afficherOnglet = function(a){
     let li = a.parentNode
     let div = document.querySelector('.tab-container');
