@@ -389,7 +389,7 @@ nav .nav-list .nav-item.btn .nav-btn{
     top: -30px;
     left: -30px;
     width: 100%;
-    height: 100%;
+    height: 89%;
     z-index: 0;
 }
 .block-center.block .block-img::before{
@@ -498,6 +498,7 @@ nav .nav-list .nav-item.btn .nav-btn{
     height: auto;
     margin: 0 20px;
     border-radius: 50%;
+
 }
 .service-img img{
     max-width: 100%;
