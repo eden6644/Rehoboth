@@ -1,0 +1,31 @@
+<div id="mecanics" class="tab-content" style="align-items: center;">
+    <div class="service-img">
+        <img src="img/mecanics/PIC_ZMP_Pumpe_003_ohne_Sperrdruckgefaess_300dpi_TBS_neuer_Schatten.png" alt="">
+    </div>
+    <div class="body">
+        <p style="text-align: left;">
+            Our mechanical staff focuses on maintenance
+            Support, Manufacturing and engineering
+            design services 
+        </p>
+        <p><a href="mecanics.html">Learn More</a></p>
+    </div>
+</div>
+
+<div id="electricity" class="tab-content">
+    <div class="service-img">
+        <img src="img/electricity.jpg" alt="">
+    </div>
+    <div class="body" style="text-align: left;">
+        <p>
+            <ul class="special-list">
+                <li style="list-style-type: disc;">Installation</li>
+                <li style="list-style-type: disc;">Connection and Disconnection of electrical equippement</li>
+                <li style="list-style-type: disc;">Installation and Maintenance of Air conditioning</li> 
+                <li style="list-style-type: disc;">Electrical drawings</li>  
+            </ul>
+            
+        </p>
+        <p><a href="electricity.html">Learn More</a></p>
+    </div>
+</div>

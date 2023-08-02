@@ -537,6 +537,9 @@ nav .nav-list .nav-item.btn .nav-btn{
 .fade.in{
     opacity: 1;
 }
+div#mecanics.tab-content.active{
+    width: 100%;
+}
 .tabs .active a{
     
     color: white;
@@ -775,12 +778,16 @@ nav .nav-list .nav-item.btn .nav-btn{
         padding-top: 5px;
         padding-bottom: 20px;
     }
+    .body p{
+        width: 100%;
+    }
     .body p a{
         display: inline-block;
         background: #e36224;
         padding: 1em;
         margin-top: 2em;
-        min-width: ;
+        width: 100%;
+        text-align: center;
         color: white;
         -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
