@@ -720,6 +720,17 @@ div#mecanics.tab-content.active{
         -ms-flex-pack: distribute;
             justify-content: space-around;
     }
+    li.nav-item.btn{
+        margin: 0;
+    }
+    li.nav-item.btn a{
+        display: inline-block;
+        height: 5em;
+        margin-top: 10px;
+        width: 99%;
+        padding-bottom: 20px;
+        
+    }
     .block-img{
         max-width: 100%;
         height: auto;
