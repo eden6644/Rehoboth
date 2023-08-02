@@ -734,6 +734,15 @@ nav .nav-list .nav-item.btn .nav-btn{
         height: 100%;
         z-index: 0;
     }
+    .tab-container{
+        width: 100%;
+    }
+    .tabs a{
+        text-align: right;
+    }
+    .tabs .active a{
+        width: 100%;
+    }
     .block-right .block-img::before{
         content: '';
         position: absolute;
@@ -766,6 +775,23 @@ nav .nav-list .nav-item.btn .nav-btn{
         padding-top: 5px;
         padding-bottom: 20px;
     }
+    .body p a{
+        display: inline-block;
+        background: #e36224;
+        padding: 1em;
+        margin-top: 2em;
+        min-width: ;
+        color: white;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        -webkit-transition: -webkit-transform .4s;
+        transition: -webkit-transform .4s;
+        -o-transition: transform .4s;
+        transition: transform .4s;
+        transition: transform .4s, -webkit-transform .4s;
+    }
+    
     .block-right{
         display: -webkit-box;
         display: -ms-flexbox;
